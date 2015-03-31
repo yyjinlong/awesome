@@ -6,7 +6,7 @@ Ubuntu
  # 这个是重点
  $ sudo aptitude install awesome-extra
 
-# awesome的主体使用系统自带的另一个主体：
+# awesome的主题使用系统自带的另一个主题：
 beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 
 # 修改桌面背景：
