@@ -138,7 +138,7 @@ mytextclock = awful.widget.textclock({ align = "right" }, " %Y-%m-%d %H:%M:%S ",
 batwidget = widget({ type = "textbox" , align = "right"})
 -- Register widget
 --vicious.register(batwidget, vicious.widgets.bat, "$1 电量:$2% 剩余时间:$3", 61, "BAT1",
-vicious.register(batwidget, vicious.widgets.bat, "电量: $2%", 61, "BAT1",
+vicious.register(batwidget, vicious.widgets.bat, "电量: <span foreground='#20B2AA'> $2% </span>", 61, "BAT1",
 --Bat % Warning
 function (widget, args)
 	if args[2] < 20 then 
@@ -213,7 +213,7 @@ vicious.register(volwidget, vicious.widgets.volume, "<span foreground='#20B2AA'>
 memwidget = widget({ type = "textbox" })
 -- Register widget
 --vicious.register(memwidget, vicious.widgets.mem, "内存: $1% ($2MB/$3MB)", 13)
-vicious.register(memwidget, vicious.widgets.mem, "内存: $1%", 13)
+vicious.register(memwidget, vicious.widgets.mem, "内存: <span foreground='#20B2AA'> $1% </span>", 13)
 --- }}}
 
 
@@ -222,7 +222,7 @@ vicious.register(memwidget, vicious.widgets.mem, "内存: $1%", 13)
 -- Initialize widget
 cpuwidget = widget({ type = "textbox" })
 -- Register widget
-vicious.register(cpuwidget, vicious.widgets.cpu, "CPU: $1%")
+vicious.register(cpuwidget, vicious.widgets.cpu, "CPU: <span foreground='#20B2AA'> $1% </span>")
 ---}}}
 
 -- Create a systray
