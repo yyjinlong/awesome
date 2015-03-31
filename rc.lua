@@ -64,7 +64,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
--- beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+-- ME
 beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -207,6 +207,23 @@ volwidget:buttons(volumeButtons)
 vicious.register(volwidget, vicious.widgets.volume, "<span foreground='#20B2AA'>$1%</span>", 1, 'Master')
 --- }}}
 
+---ME
+--- {{{ Mem
+-- Initialize widget
+memwidget = widget({ type = "textbox" })
+-- Register widget
+--vicious.register(memwidget, vicious.widgets.mem, "内存: $1% ($2MB/$3MB)", 13)
+vicious.register(memwidget, vicious.widgets.mem, "内存: $1%", 13)
+--- }}}
+
+
+---ME
+--- {{{ CPU
+-- Initialize widget
+cpuwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(cpuwidget, vicious.widgets.cpu, "CPU: $1%")
+---}}}
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
@@ -293,7 +310,13 @@ for s = 1, screen.count() do
 	batwidget,
 	myspacer,
 	volwidget,
+	myspacer,
 	volicon,
+	myspacer,
+	memwidget,
+	myspacer,
+	cpuwidget,
+	myspacer,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
