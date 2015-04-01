@@ -180,7 +180,7 @@ volicon = widget({ type = "imagebox", name = "volicon" })
 volicon.image = image("/usr/share/icons/Humanity-Dark/status/24/audio-volume-medium.png")
 -- Initialize widgets
 local volwidget = widget({ type = "textbox" })
---定义快捷键 Fn+[F1或F2]来调节音量
+--使用快捷键 Fn+[F1或F2]来调节音量
 volumeButtons = awful.util.table.join(  
    awful.button({ }, 4, function()   
                            awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")  
@@ -337,6 +337,22 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
+
+    --ME
+    -- {{{ 截屏 Ctrl + Alt + x
+    awful.key({"Mod1", "Control"}, "x", 
+	function ()
+	    awful.util.spawn('shutter')
+    	end),
+    -- }}}
+
+    --ME
+    -- {{{ Ctrl + Atl + l 锁屏：
+    awful.key({"Mod1", "Control"}, "l", 
+	function ()
+	    awful.util.spawn('gnome-screensaver-command --lock')
+	end),
+    -- }}}
 
     awful.key({ modkey,           }, "j",
         function ()

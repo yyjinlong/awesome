@@ -80,5 +80,18 @@ autorunApps =
 }
 ---}}}
 
+# 截屏软件
+ubuntu 自带的截屏软件是： gnome-screenshot但是该软件智能截整个屏幕，二不能进行选择，所以推荐使用shutter
+Shutter，是一款Linux平台下广受欢迎的截屏软件。
+
+# 
+# 截屏软件
+ubuntu 自带的截屏软件是： gnome-screenshot但是该软件智能截整个屏幕，二不能进行选择，所以推荐使用shutter
+Shutter，是一款Linux平台下广受欢迎的截屏软件。
+
+# 安装方法
+sudo add-apt-repository ppa:shutter/ppa
+sudo apt-get update && sudo apt-get install shutter
+
 #TODO:
 1) 搜狗输入法去掉黑边
