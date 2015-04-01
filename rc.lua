@@ -354,6 +354,15 @@ globalkeys = awful.util.table.join(
 	end),
     -- }}}
 
+    --ME
+    -- {{{ Win + f 打开主文件夹 
+    awful.key({ modkey }, "f", 
+	function ()
+	    awful.util.spawn('nautilus')
+    	end),
+    -- }}}
+
+
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
