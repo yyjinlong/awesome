@@ -49,29 +49,29 @@ author：jinlong.yang
 
 ### 安装awesome后配置注意事项
 - 安装后，教程上要你配置.xinitrc，不用去配置这个, 并执行这个：$ ln -s ~/.xinitrc ~/.xprofile
--$ cat .xinitrc 
--#/usr/bin/env bash
--
--#启动屏保程序
--gnome-screensaver &
--
--#启用gnome的主题，否则你的awesome下的gnome程序会非常难看
--gnome-settings-daemon &    
--
--#电源管理程序
--#gnome-power-statistics &
--
--#输入法
--fcitx &
--
--#网络管理程序
--nm-applet --sm-disable &                           
--
--#自动更新程序
--#update-notifier & 
--
--#执行which awesome查看awesome路径 
--exec /usr/bin/awesome
+- $ cat .xinitrc 
+- #/usr/bin/env bash
+
+- #启动屏保程序
+- gnome-screensaver &
+
+- #启用gnome的主题，否则你的awesome下的gnome程序会非常难看
+- gnome-settings-daemon &    
+
+- #电源管理程序
+- #gnome-power-statistics &
+
+- #输入法
+- fcitx &
+
+- #网络管理程序
+- nm-applet --sm-disable &                           
+
+- #自动更新程序
+- #update-notifier & 
+
+- #执行which awesome查看awesome路径 
+- exec /usr/bin/awesome
 
 ### 注：千万别配置这个
 - 原因：万一awesome配置失败，启动进入不了awesome，我们还可选择进入ubuntu自带的默认桌面里办公
