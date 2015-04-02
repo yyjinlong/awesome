@@ -28,7 +28,8 @@ autorunApps =
 { 
     "nm-applet --sm-disable &",
     "gnome-settings-daemon &",
-    "gnome-screensaver &"
+    "gnome-screensaver &",
+    "sogou-qimpanel&"
 }
 ---}}}
 
