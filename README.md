@@ -4,6 +4,8 @@ author：jinlong.yang
 
 
 ### 需知
+- vicious [ˈvɪʃəs]
+- awful [ˈɔ:fl]
 - 电量、音量、CPU、MEM等在awesome上显示需要安装Vicious插件
 - Vicious 官方wiki：http://awesome.naquadah.org/wiki/Vicious
 
