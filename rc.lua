@@ -29,7 +29,8 @@ autorunApps =
     "nm-applet --sm-disable &",
     "gnome-settings-daemon &",
     "gnome-screensaver &",
-    "sogou-qimpanel&"
+    "sogou-qimpanel&", -- 默认启动搜狗
+    "compton &" -- 混合式窗口, 去掉黑边,不要用-b参数
 }
 ---}}}
 

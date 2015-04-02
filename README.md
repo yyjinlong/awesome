@@ -103,5 +103,8 @@ author：jinlong.yang
 ### 搜狗输入法黑边:
 - Awesome之所以会出现小黑框，主要是其作为窗口管理器没有compositor，导致无法形成窗口与窗口直接的透明，阴影效果。
 - $ sudo apt-get install compton
+- $ compton &
+
+### 不推荐使用-b参数
 - $ compton -b # 打开 composite manger, -b表示后台运行。 
-- 问题：chrome浏览器显示不全，所以暂时还留着这个小黑边吧
+- 问题：chrome浏览器显示不全的问题
