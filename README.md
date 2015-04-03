@@ -3,7 +3,7 @@ Awesome 配置
 author：jinlong.yang
 
 ### 效果
-![solarized](https://github.com/yyjinlong/awesome/tree/master/screenshot/my_awesome.png?raw=true)
+![solarized](https://github.com/yyjinlong/awesome/blob/master/screenshot/my_awesome.png?raw=true)
 
 ### 需知
 - vicious [ˈvɪʃəs]
