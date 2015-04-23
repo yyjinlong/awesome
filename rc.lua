@@ -24,8 +24,8 @@ vicious = require("vicious")
 ---{{{ auto start
 -- 添加自启动
 autorun = true
-autorunApps = 
-{ 
+autorunApps =
+{
     "nm-applet --sm-disable &",
     "gnome-settings-daemon &",
     "gnome-screensaver &",
@@ -143,7 +143,7 @@ batwidget = widget({ type = "textbox" , align = "right"})
 vicious.register(batwidget, vicious.widgets.bat, "电量: <span foreground='#20B2AA'> $2% </span>", 61, "BAT1",
 --Bat % Warning
 function (widget, args)
-	if args[2] < 20 then 
+	if args[2] < 20 then
 		naughty.notify({ title      = "<span color='red'>Battery Warning</span>"
 		, text       = "<span color='red'>Battery low! "..args[2].."% left!</span>"
 		, timeout    = 60
@@ -172,7 +172,7 @@ awful.widget.layout.margins[batprog.widget] = {align= "right", top = 6}
 ---ME
 --- {{{ space
 myspacer = widget({ type = "textbox" })
-myspacer.text = " "   
+myspacer.text = " "
 --- }}}
 
 ---ME
@@ -183,29 +183,29 @@ volicon.image = image("/usr/share/icons/Humanity-Dark/status/24/audio-volume-med
 -- Initialize widgets
 local volwidget = widget({ type = "textbox" })
 --使用快捷键 Fn+[F1或F2]来调节音量
-volumeButtons = awful.util.table.join(  
-   awful.button({ }, 4, function()   
-                           awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")  
-                           awful.util.spawn_with_shell("amixer -q -c 0 set Master 5%+")  
-                        end  ),  
-   awful.button({ }, 5, function()  
-                           awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")  
-                           awful.util.spawn_with_shell("amixer -qc 0 set Master 5%-")  
-                        end  ),  
-   awful.button({ }, 3, function()  
-                           awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")  
-                           awful.util.spawn_with_shell("amixer -qc 0 set Master 5%-")  
-                        end  ),  
-   awful.button({ }, 1, function()  
-                           local offcount=awful.util.pread("amixer  -c 0 set Master toggle |grep off|wc -l")  
-                           if  string.match(offcount, "0") then   
-                              awful.util.spawn_with_shell("amixer -qc 0 set Master 89%")  
-                           else   
-                              awful.util.spawn_with_shell("amixer -qc 0 set Master 0")  
-                           end  
-                        end  )  
-)  
-volwidget:buttons(volumeButtons)  
+volumeButtons = awful.util.table.join(
+   awful.button({ }, 4, function()
+                           awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")
+                           awful.util.spawn_with_shell("amixer -q -c 0 set Master 5%+")
+                        end  ),
+   awful.button({ }, 5, function()
+                           awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")
+                           awful.util.spawn_with_shell("amixer -qc 0 set Master 5%-")
+                        end  ),
+   awful.button({ }, 3, function()
+                           awful.util.spawn_with_shell("amixer -q -c 0 set Master unmute")
+                           awful.util.spawn_with_shell("amixer -qc 0 set Master 5%-")
+                        end  ),
+   awful.button({ }, 1, function()
+                           local offcount=awful.util.pread("amixer  -c 0 set Master toggle |grep off|wc -l")
+                           if  string.match(offcount, "0") then
+                              awful.util.spawn_with_shell("amixer -qc 0 set Master 89%")
+                           else
+                              awful.util.spawn_with_shell("amixer -qc 0 set Master 0")
+                           end
+                        end  )
+)
+volwidget:buttons(volumeButtons)
 vicious.register(volwidget, vicious.widgets.volume, "<span foreground='#20B2AA'>$1%</span>", 1, 'Master')
 --- }}}
 
@@ -342,7 +342,7 @@ globalkeys = awful.util.table.join(
 
     --ME
     -- {{{ 截屏 Ctrl + Alt + x
-    awful.key({"Mod1", "Control"}, "x", 
+    awful.key({"Mod1", "Control"}, "x",
 	function ()
 	    awful.util.spawn('shutter')
     	end),
@@ -350,15 +350,15 @@ globalkeys = awful.util.table.join(
 
     --ME
     -- {{{ Ctrl + Atl + l 锁屏：
-    awful.key({"Mod1", "Control"}, "l", 
+    awful.key({"Mod1", "Control"}, "l",
 	function ()
 	    awful.util.spawn('gnome-screensaver-command --lock')
 	end),
     -- }}}
 
     --ME
-    -- {{{ Win + f 打开主文件夹 
-    awful.key({ modkey }, "f", 
+    -- {{{ Win + f 打开主文件夹
+    awful.key({ modkey }, "f",
 	function ()
 	    awful.util.spawn('nautilus')
     	end),
